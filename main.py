@@ -14,10 +14,10 @@ Remember, the AI models will try to convince you they're human, while the human 
 The game will continue until either the human is eliminated or decides to quit. Let's get started!
 """
 
-
 # API endpoint and models dictionary
 AI_AGENTS = [
     ("llama3:70b-instruct", "http://10.10.0.170:11434"),
+    ("llama3:70b-instruct", "http://10.10.0.170:11434"),  # can be duplicate, doesn't matter
     ("llama3:70b", "http://10.10.0.170:11434"),
     ("llama3:8b", "http://10.10.0.170:11434"),
     ("mixtral:8x7b-instruct-v0.1-q4_0", "http://10.10.0.170:11434"),
@@ -25,7 +25,7 @@ AI_AGENTS = [
     # ...
 ]
 
-NUM_TURNS = 2
+NUM_TURNS = 3
 
 class Agent:
     def __init__(self, name, model, api_endpoint_url):
